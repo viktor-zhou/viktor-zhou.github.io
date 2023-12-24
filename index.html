@@ -19,8 +19,8 @@
 
 		p {
 			font-size: 16px;
-			text-align:justify;
-			text-justify:inter-ideograph;
+			text-align: justify;
+			text-justify: inter-ideograph;
 		}
 
 		h1 {
@@ -177,6 +177,33 @@
 			border-color: #666666;
 			background-color: #ffffff;
 		}
+
+		/* CSS Style to Hide Div*/
+		.popup {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 300px;
+			height: 180px;
+			background-color: #ffffff;
+			padding: 10px;
+			border: 3px solid #ccc;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			z-index: 9999;
+		}
+
+		button {
+		background-color: #6159f4;
+		border: none;
+		color: white;
+		cursor: pointer;
+		}
+
+		button:hover {
+		background-color: #061af4;
+		}
 	</style>
 	<script async="" src="./homepage_files/analytics.js"></script>
 	<!-- dlzhou.top Baidu tongji analytics -->
@@ -231,28 +258,49 @@
 				<!-- <a href="https://orcid.org/0000-0003-0361-8597" target="_blank">ORCID</a> -->
 			</p>
 			<br>
-			<b>If you are interested in working with me on reasearch or projects, you can email me at [zhou-dongliang at outlook.com].</b>
+			<b>If you are interested in working with me on reasearch or projects, you can email me at [zhou-dongliang at
+				outlook.com].</b>
 		</div>
 
 	</div>
 	<div class="container">
 		<h2>Short Bio</h2>
 		<p style="text-align:justify; text-justify:inter-ideograph;">
-			I am pursuing a Ph.D. at Harbin Institute of Technology, Shenzhen, within the Department of Computer Science and Technology, under the supervision of <a href="https://dl2link.com/"
-				target="_blank">Prof. Haijun Zhang</a>. I will soon join
+			I am pursuing a Ph.D. at Harbin Institute of Technology, Shenzhen, within the Department of Computer Science
+			and Technology, under the supervision of <a href="https://dl2link.com/" target="_blank">Prof. Haijun
+				Zhang</a>. I will soon join
 			the research group led by <a href="https://liqiangnie.github.io/index.html" target="_blank"> Prof.
-				Liqiang Nie</a> as a postdoctoral researcher. My research focuses on multimedia computing, multimodal learning, and image synthesis. 
+				Liqiang Nie</a> as a postdoctoral researcher. My research focuses on multimedia computing, multimodal
+			learning, and image synthesis.
 			<br>
 		</p>
 	</div>
 	<div class="container">
 		<h2>Selected Publications</h2>
 		<div class="publication">
+			<div id="popup" class="popup">
+				<!-- <h2>Data links:</h2> -->
+				<p>Data will be soon available since the paper is published.</p>
+				<button style="display:block;margin:0 auto" onclick="hidePopup()">Close</button>
+			</div>
+			<script>
+				function showPopup() {
+					document.getElementById("popup").style.display = "block";
+				}
+
+				function hidePopup() {
+					document.getElementById("popup").style.display = "none";
+				}
+			</script>
 			<img src="./homepage_imgs/stnet_logo.png" class="publogo" width="200 px">
 			<p>
 				<strong>
-					<a href="" target="_blank">Towards Intelligent Design: A Self-Driven Framework for Collocated Clothing Synthesis Leveraging Fashion Styles and Textures</a>
+					<a href="" target="_blank">Towards Intelligent Design: A Self-Driven Framework for Collocated
+						Clothing Synthesis Leveraging Fashion Styles and Textures</a>
+					<b><button onclick="showPopup()">Data</button></b>
 				</strong>
+
+
 				<br>
 				<br>
 				Minglong Dong<sup>&#8224;</sup>, <b>Dongliang Zhou<sup>&#8224;</sup></b>, Jianghong Ma, and Haijun Zhang
@@ -359,7 +407,8 @@
 				</strong>
 				<br>
 				<br>
-				<b>Dongliang Zhou</b>, Haijun Zhang, Kai Yang, Linlin Liu, Han Yan, Xiaofei Xu, Zhao Zhang, and Shuicheng
+				<b>Dongliang Zhou</b>, Haijun Zhang, Kai Yang, Linlin Liu, Han Yan, Xiaofei Xu, Zhao Zhang, and
+				Shuicheng
 				Yan
 				<br>
 				<br>
@@ -419,7 +468,7 @@
 			<li>Information Processing & Management</li>
 		</ul>
 	</div>
-<!--	<div class="container">
+	<!--	<div class="container">
 		<h2>Supervised or Co-supervised Students</h2>
 		<table class="gridtable">
 			<tr>
@@ -459,7 +508,7 @@
 			</tr>
 		</table>
 	</div>-->
-	
+
 	<center>
 		<p>
 		<div id="clustrmaps-widget" style="width:5%" align=center>
