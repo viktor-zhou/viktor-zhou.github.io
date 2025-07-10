@@ -209,6 +209,13 @@
 			text-align: center;
 			border-right: 1px solid #ddd;
 		}
+		.icon-link {
+		text-decoration: none;
+		}
+
+		.icon-link:hover {
+		text-decoration: none; /* 防止 hover 时出现下划线 */
+		}
 	</style>
 	<script async="" src="./homepage_files/analytics.js"></script>
 	<!-- dlzhou.top Baidu tongji analytics -->
@@ -256,8 +263,21 @@
 			<br>
 
 			<p class="external">
-				<a href="https://scholar.google.com/citations?user=7di2778AAAAJ" class="first">Google Scholar</a>
-				<!-- <a href="https://orcid.org/0000-0003-0361-8597" target="_blank">ORCID</a> -->
+				<a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank">
+					<img 
+					  src="./homepage_assets/icons8-google-scholar-144.png" 
+					  alt="Google Scholar"
+					  style="height: 2.65em; vertical-align: middle;"
+					/>
+				  </a>
+
+				<a class="icon-link" href="https://orcid.org/0000-0003-0361-8597" target="_blank">
+					<img 
+					  src="./homepage_assets/orcid.logo.icon.svg" 
+					  alt="ORCID"
+					  style="height: 2.3em; vertical-align: middle;"
+					/>
+				  </a>
 			</p>
 			<br>
 			<b>If you are interested in working with me on research or projects, you can email me at [zhou-dongliang at
@@ -289,8 +309,7 @@
 				</strong>
 				<br>
 				<br>
-				<b>Dongliang Zhou</b>, Yakun Zhang,
-		Jinghan Wu, Xingyu Zhang, Liang Xie, and Erwei Yin <b><a href="https://huggingface.co/datasets/MML-Group/AVE-Speech" target="_blank"><button>Data</button></a></b> <a href="https://github.com/MML-Group/code4AVE-Speech" target="_blank"><button>Code</button></a></b> 
+				<b>Dongliang Zhou</b>, Yakun Zhang, Jinghan Wu, Xingyu Zhang, Liang Xie, and Erwei Yin <b><a href="https://huggingface.co/datasets/MML-Group/AVE-Speech" target="_blank"><button>Data</button></a></b> <a href="https://github.com/MML-Group/code4AVE-Speech" target="_blank"><button>Code</button></a></b> 
 				<br>
 				<br>
 				<em>IEEE Transactions on Human-Machine Systems, 2025</em>
