@@ -212,7 +212,14 @@
 		.icon-link {
 		text-decoration: none;
 		}
-
+		.icon-link img {
+  		transition: transform 0.3s ease, box-shadow 0.3s ease;
+  		border-radius: 8px;
+		}
+		.icon-link img:hover {
+  		transform: scale(1.05) rotate(2deg);
+  		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+		}
 		.icon-link:hover {
 		text-decoration: none; /* 防止 hover 时出现下划线 */
 		}
