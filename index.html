@@ -209,109 +209,19 @@
 			text-align: center;
 			border-right: 1px solid #ddd;
 		}
-
 		.icon-link {
-			text-decoration: none;
+		text-decoration: none;
 		}
-
 		.icon-link img {
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-			border-radius: 8px;
+  		transition: transform 0.3s ease, box-shadow 0.3s ease;
+  		border-radius: 8px;
 		}
-
 		.icon-link img:hover {
-			transform: scale(1.05) rotate(2deg);
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  		transform: scale(1.05) rotate(2deg);
+  		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 		}
-
 		.icon-link:hover {
-			text-decoration: none;
-			/* 防止 hover 时出现下划线 */
-		}
-
-		html {
-			scroll-behavior: smooth;
-		}
-
-		.navbar {
-			position: fixed;
-			top: 50%;
-			left: 100px;
-			transform: translateY(-50%);
-			background-color: rgba(255, 255, 255, 0.95);
-			border: 1px solid #ccc;
-			border-radius: 12px;
-			padding: 20px 10px;
-			z-index: 10000;
-			font-family: Arial, sans-serif;
-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-			backdrop-filter: blur(6px);
-		}
-
-		.nav-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.nav-container a {
-			color: #0953d4;
-			text-decoration: none;
-			margin: 15px 0;
-			font-size: 16px;
-			transition: color 0.3s;
-		}
-
-		.nav-container a:hover {
-			color: #061af4;
-		}
-
-		#toggle-nav {
-		  align-self: center;
-		  margin-top: 10px;
-		  background-color: #0953d4;
-		  color: white;
-		  border: none;
-		  font-size: 16px;
-		  cursor: pointer;
-		  padding: 4px 8px;
-		  border-radius: 4px;
-		  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-		  opacity: 0.6;
-		  transition: opacity 0.3s, background-color 0.3s;
-		}
-
-		#toggle-nav:hover {
-		  opacity: 1;
-		  background-color: #061af4;
-		}
-
-		.nav-hidden .nav-container {
-		  display: none;
-		}
-		.nav-hidden {
-		  left: 0 !important;
-		  width: 20px;
-		  height: 60px;
-		  padding: 5px 0;
-		  border-radius: 30px;
-		  background-color: rgba(9, 83, 212, 0.8);
-		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-		  overflow: hidden;
-		  transition: all 0.3s ease;
-		}
-
-		.nav-hidden #toggle-nav {
-		  writing-mode: vertical-rl;
-		  transform: rotate(180deg);
-		  font-size: 14px;
-		  padding: 0;
-		  margin: 0;
-		  width: 100%;
-		  height: 100%;
-		  background-color: transparent;
-		  box-shadow: none;
-		  color: white;
+		text-decoration: none; /* 防止 hover 时出现下划线 */
 		}
 	</style>
 	<script async="" src="./homepage_files/analytics.js"></script>
@@ -338,19 +248,10 @@
 </head>
 
 <body>
-	<nav class="navbar">
-		<div class="nav-container">
-			<a href="#title">Home</a>
-			<a href="#bio">Bio</a>
-			<a href="#publications">Publications</a>
-			<a href="#services">Services</a>
-		</div>
-		<button id="toggle-nav" aria-label="Toggle Navigation">☰ Hide/Show</button>
-	</nav>
-	<div class="title" id="title">
+	<div class="title">
 		<div id="sidebar"><img src="./homepage_imgs/me.jpeg" vspace="40 px" width="215 px" id="me" itemprop="photo">
 		</div>
-		<div>
+		<div id="bio">
 			<br>
 			<h1>
 				<span itemprop="name">Dongliang Zhou&nbsp; <font size="5" face="微软雅黑">
@@ -370,14 +271,20 @@
 
 			<p class="external">
 				<a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank">
-					<img src="./homepage_assets/icons8-google-scholar-144.png" alt="Google Scholar"
-						style="height: 2.65em; vertical-align: middle;" />
-				</a>
+					<img 
+					  src="./homepage_assets/icons8-google-scholar-144.png" 
+					  alt="Google Scholar"
+					  style="height: 2.65em; vertical-align: middle;"
+					/>
+				  </a>
 
 				<a class="icon-link" href="https://orcid.org/0000-0003-0361-8597" target="_blank">
-					<img src="./homepage_assets/orcid.logo.icon.svg" alt="ORCID"
-						style="height: 2.3em; vertical-align: middle;" />
-				</a>
+					<img 
+					  src="./homepage_assets/orcid.logo.icon.svg" 
+					  alt="ORCID"
+					  style="height: 2.3em; vertical-align: middle;"
+					/>
+				  </a>
 			</p>
 			<br>
 			<b>If you are interested in working with me on research or projects, you can email me at [zhou-dongliang at
@@ -385,21 +292,19 @@
 		</div>
 
 	</div>
-	<div class="container" id="bio">
+	<div class="container">
 		<h2>Short Bio</h2>
 		<p style="text-align:justify; text-justify:inter-ideograph;">
 			Dongliang Zhou is a postdoctoral researcher at Harbin Institute of Technology, Shenzhen, working under the
 			supervision of Prof.
-			Liqiang Nie. He obtained his doctoral degree from the School of Computer Science and Technology at
+				Liqiang Nie. He obtained his doctoral degree from the School of Computer Science and Technology at
 			the same institution. His research interests include multimedia computing, multimodal learning, and image
-			synthesis. In addition to his research, he serves as an associate editor for Applied Intelligence and as an
-			editorial board member of Applied Soft Computing. He is also actively involved in mentoring undergraduate
-			and graduate students from Harbin Institute of Technology, Peking University, etc., in
+			synthesis. In addition to his research, he serves as an associate editor for Applied Intelligence and as an editorial board member of Applied Soft Computing. He is also actively involved in mentoring undergraduate and graduate students from Harbin Institute of Technology, Peking University, etc., in
 			conducting scientific research.
 			<br>
 		</p>
 	</div>
-	<div class="container" id="publications">
+	<div class="container">
 		<h2>Selected Publications</h2>
 		<div class="publication">
 			<div class="left-div">
@@ -407,16 +312,11 @@
 			</div>
 			<p>
 				<strong>
-					<a href="https://doi.org/10.1109/THMS.2025.3585165" target="_blank">AVE Speech: A Comprehensive
-						Multi-Modal Dataset for Speech Recognition Integrating Audio, Visual, and Electromyographic
-						Signals</a>
+					<a href="https://doi.org/10.1109/THMS.2025.3585165" target="_blank">AVE Speech: A Comprehensive Multi-Modal Dataset for Speech Recognition Integrating Audio, Visual, and Electromyographic Signals</a>
 				</strong>
 				<br>
 				<br>
-				<b>Dongliang Zhou</b>, Yakun Zhang, Jinghan Wu, Xingyu Zhang, Liang Xie, and Erwei Yin <b><a
-						href="https://huggingface.co/datasets/MML-Group/AVE-Speech"
-						target="_blank"><button>Data</button></a></b> <a
-					href="https://github.com/MML-Group/code4AVE-Speech" target="_blank"><button>Code</button></a></b>
+				<b>Dongliang Zhou</b>, Yakun Zhang, Jinghan Wu, Xingyu Zhang, Liang Xie, and Erwei Yin <b><a href="https://huggingface.co/datasets/MML-Group/AVE-Speech" target="_blank"><button>Data</button></a></b> <a href="https://github.com/MML-Group/code4AVE-Speech" target="_blank"><button>Code</button></a></b> 
 				<br>
 				<br>
 				<em>IEEE Transactions on Human-Machine Systems, 2025</em>
@@ -430,14 +330,11 @@
 			</div>
 			<p>
 				<strong>
-					<a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025001996"
-						target="_blank">PanoGen++: Domain-Adapted Text-Guided Panoramic Environment Generation for
-						Vision-and-Language Navigation</a>
+					<a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025001996" target="_blank">PanoGen++: Domain-Adapted Text-Guided Panoramic Environment Generation for Vision-and-Language Navigation</a>
 				</strong>
 				<br>
 				<br>
-				Sen Wang<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;,&#9993;</sup>, Liang Xie, Chao Xu, Ye Yan,
-				and Erwei Yin
+				Sen Wang<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;,&#9993;</sup>, Liang Xie, Chao Xu, Ye Yan, and Erwei Yin
 				<br>
 				<br>
 				<em>Neural Networks, 2025</em>
@@ -450,8 +347,7 @@
 			</div>
 			<p>
 				<strong>
-					<a href="https://link.springer.com/book/9783031810473" target="_blank">Advanced Multimodal
-						Compatibility Modeling and Recommendation</a>
+					<a href="https://link.springer.com/book/9783031810473" target="_blank">Advanced Multimodal Compatibility Modeling and Recommendation</a>
 				</strong>
 				<br>
 				<br>
@@ -468,8 +364,7 @@
 			</div>
 			<p>
 				<strong>
-					<a href="https://arxiv.org/abs/2501.04204" target="_blank">LipGen: Viseme-Guided Lip Video
-						Generation for Enhancing Visual Speech
+					<a href="https://arxiv.org/abs/2501.04204" target="_blank">LipGen: Viseme-Guided Lip Video Generation for Enhancing Visual Speech
 						Recognition</a>
 				</strong>
 				<br>
@@ -504,7 +399,7 @@
 		<br>
 		<br>
 		<div class="publication">
-
+			
 			<div class="left-div">
 				<img src="./homepage_imgs/stnet_logo.jpeg" class="publogo" width="200 px">
 			</div>
@@ -513,8 +408,7 @@
 					<a href="https://ieeexplore.ieee.org/document/10446336" target="_blank">Towards Intelligent Design:
 						A Self-Driven Framework for Collocated
 						Clothing Synthesis Leveraging Fashion Styles and Textures</a>
-					<b><a href="https://huggingface.co/datasets/Fashion-Intelligence/ST-Net-dataset"
-							target="_blank"><button>Data</button></a></b>
+					<b><a href="https://huggingface.co/datasets/Fashion-Intelligence/ST-Net-dataset" target="_blank"><button>Data</button></a></b>
 				</strong>
 				<br>
 				<br>
@@ -645,7 +539,7 @@
 		</div>
 	</div>
 	<br>
-	<div class="container" id="services">
+	<div class="container">
 		<h2>Professional Services</h2>
 		<h4>Editorial Roles</h4>
 		<ul>
@@ -679,31 +573,6 @@
 		</div>
 		</p>
 	</center>
-  <script>
-    const toggleButton = document.getElementById('toggle-nav');
-    const navbar = document.querySelector('.navbar');
-
-    // Hide the button until JS runs
-    toggleButton.style.visibility = 'hidden';
-
-    document.addEventListener('DOMContentLoaded', () => {
-      function updateButtonText() {
-        if (navbar.classList.contains('nav-hidden')) {
-          toggleButton.textContent = '☰ Show';
-        } else {
-          toggleButton.textContent = '☰ Hide';
-        }
-      }
-
-      toggleButton.addEventListener('click', () => {
-        navbar.classList.toggle('nav-hidden');
-        updateButtonText();
-      });
-
-      updateButtonText();
-      toggleButton.style.visibility = 'visible';
-    });
-  </script>
 </body>
 
 </html>
