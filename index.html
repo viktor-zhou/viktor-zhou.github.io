@@ -265,6 +265,54 @@
 		.nav-container a:hover {
 			color: #061af4;
 		}
+
+		#toggle-nav {
+		  align-self: center;
+		  margin-top: 10px;
+		  background-color: #0953d4;
+		  color: white;
+		  border: none;
+		  font-size: 16px;
+		  cursor: pointer;
+		  padding: 4px 8px;
+		  border-radius: 4px;
+		  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+		  opacity: 0.6;
+		  transition: opacity 0.3s, background-color 0.3s;
+		}
+
+		#toggle-nav:hover {
+		  opacity: 1;
+		  background-color: #061af4;
+		}
+
+		.nav-hidden .nav-container {
+		  display: none;
+		}
+		.nav-hidden {
+		  left: 0 !important;
+		  width: 20px;
+		  height: 60px;
+		  padding: 5px 0;
+		  border-radius: 30px;
+		  background-color: rgba(9, 83, 212, 0.8);
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		  overflow: hidden;
+		  transition: all 0.3s ease;
+		}
+
+		.nav-hidden #toggle-nav {
+		  writing-mode: vertical-rl;
+		  transform: rotate(180deg);
+		  font-size: 14px;
+		  padding: 0;
+		  margin: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: transparent;
+		  box-shadow: none;
+		  color: white;
+		}
 	</style>
 	<script async="" src="./homepage_files/analytics.js"></script>
 	<!-- dlzhou.top Baidu tongji analytics -->
@@ -297,6 +345,7 @@
 			<a href="#publications">Publications</a>
 			<a href="#services">Services</a>
 		</div>
+		<button id="toggle-nav" aria-label="Toggle Navigation">☰ Hide/Show</button>
 	</nav>
 	<div class="title" id="title">
 		<div id="sidebar"><img src="./homepage_imgs/me.jpeg" vspace="40 px" width="215 px" id="me" itemprop="photo">
@@ -630,6 +679,31 @@
 		</div>
 		</p>
 	</center>
+  <script>
+    const toggleButton = document.getElementById('toggle-nav');
+    const navbar = document.querySelector('.navbar');
+
+    // Hide the button until JS runs
+    toggleButton.style.visibility = 'hidden';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      function updateButtonText() {
+        if (navbar.classList.contains('nav-hidden')) {
+          toggleButton.textContent = '☰ Show';
+        } else {
+          toggleButton.textContent = '☰ Hide';
+        }
+      }
+
+      toggleButton.addEventListener('click', () => {
+        navbar.classList.toggle('nav-hidden');
+        updateButtonText();
+      });
+
+      updateButtonText();
+      toggleButton.style.visibility = 'visible';
+    });
+  </script>
 </body>
 
 </html>
