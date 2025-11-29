@@ -1,570 +1,938 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="robots" content="index,follow">
-	<meta name="keywords" content="Dongliang Zhou, 周栋梁, Harbin Institute of Technology, Shenzhen, 哈尔滨工业大学（深圳）">
-	<link rel="author" href="https://www.viktor-zhou.com/">
-	<link rel="shortcut icon" href="./homepage_imgs/d.zhou.ico" type="image/x-icon">
-	<title>Dongliang's Homepage</title>
-	<style>
-		@media screen and (max-device-width: 768px) {
-			body {
-				-webkit-text-size-adjust: none;
-			}
-		}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+  <meta name="keywords"
+    content="Dongliang Zhou, 周栋梁, Harbin Institute of Technology, Shenzhen, 哈尔滨工业大学（深圳）" />
+  <link rel="author" href="https://www.viktor-zhou.com/" />
+  <link rel="shortcut icon" href="./homepage_imgs/d.zhou.ico" type="image/x-icon" />
+  <title>Dongliang's Homepage</title>
 
-		p {
-			font-size: 16px;
-			text-align: justify;
-			text-justify: inter-ideograph;
-		}
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #4f46e5;
+      --accent-color-soft: #eef2ff;
+      --accent-color-hover: #3730a3;
+      --border-color: #e5e7eb;
+      --bg-color: #f3f4f6;
+      --card-bg-color: #ffffff;
+      --text-color: #111827;
+      --muted-text: #6b7280;
+    }
 
-		h1 {
-			font-size: 34px;
-			margin: 0;
-			padding: 0;
-		}
+    @media screen and (max-device-width: 768px) {
+      body {
+        -webkit-text-size-adjust: none;
+      }
+    }
 
-		h2 {
-			font-size: 20px;
-			margin: 0;
-			padding: 0;
-		}
+    * {
+      box-sizing: border-box;
+    }
 
-		h3 {
-			font-size: 18px;
-			margin: 8;
-			padding: 0;
-		}
+    body {
+      margin: 0;
+      padding: 24px 16px 32px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      font-size: 16px;
+      background: radial-gradient(circle at top, #e0ecff 0, #f3f4f6 45%, #f9fafb 100%);
+      color: var(--text-color);
+      line-height: 1.7;
+    }
 
-		body {
-			padding: 0;
-			font-family: Arial;
-			font-size: 16px;
-			background-color: #fff;
-		}
+    p {
+      font-size: 16px;
+      text-align: justify;
+      text-justify: inter-ideograph;
+      margin: 0 0 0.85em;
+      color: var(--text-color);
+    }
 
-		.title {
-			width: 768px;
-			margin: 10px auto;
-		}
+    h1 {
+      font-size: 32px;
+      margin: 0 0 0.25em;
+      padding: 0;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
 
-		.container {
-			width: 768px;
-			margin: 20px auto;
-			border-radius: 10px;
-			background-color: #fff;
-			padding: 10px;
-			clear: both;
-		}
+    h2 {
+      font-size: 22px;
+      margin: 0 0 0.75em;
+      padding: 0;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary-color);
+    }
 
-		#bio {
-			padding-top: 40px;
-		}
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 24px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--accent-color), #22c55e);
+    }
 
-		#me {
-			border: 0 solid black;
-			margin-bottom: 50px;
-			border-radius: 10px;
-		}
+    h3 {
+      font-size: 18px;
+      margin: 8px 0;
+      padding: 0;
+    }
 
-		#sidebar {
-			margin-left: 25px;
-			border: 0 solid black;
-			float: right;
-			margin-bottom: 0;
-		}
+    h4 {
+      margin: 0.75em 0 0.4em;
+      color: var(--primary-color);
+    }
 
-		a {
-			text-decoration: none;
-		}
+    /* Ensure anchored sections are not hidden behind the sticky top nav */
+    #short-bio-heading,
+    #publications-heading,
+    #services-heading {
+      scroll-margin-top: 88px;
+    }
 
-		a:hover {
-			text-decoration: underline;
-		}
+    html {
+      scroll-behavior: smooth;
+    }
 
-		a:visited {
-			color: #0050e7;
-		}
+    a {
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 500;
+    }
 
-		.publogo {
-			width: 100 px;
-			margin-right: 20px;
-			float: left;
-			border: 0;
-		}
+    a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
 
-		.publication {
-			clear: left;
-			padding-bottom: 0px;
-		}
+    a:visited {
+      color: #4f46e5;
+    }
 
-		.publication p {
-			height: 100px;
-			padding-top: 5px;
-		}
+    .icon-link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-		.publication strong a {
-			color: #0953d4;
-		}
+    .icon-link img {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border-radius: 999px;
+      vertical-align: middle;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+      background: #ffffff;
+    }
 
-		.publication .links {
-			position: relative;
-			top: 15px
-		}
+    .icon-link img:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.3);
+    }
 
-		.publication .links a {
-			margin-right: 20px;
-		}
+    .icon-link:hover {
+      text-decoration: none;
+    }
 
-		.codelogo {
-			margin-right: 10px;
-			float: left;
-			border: 0;
-		}
+    .container {
+      max-width: 900px;
+      margin: 0 auto 24px;
+      padding: 20px 26px 22px;
+      border-radius: 22px;
+      background-color: var(--card-bg-color);
+      clear: both;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
 
-		.code {
-			clear: left;
-			padding-bottom: 10px;
-			vertical-align: middle;
-		}
+    .container:hover {
+      transform: translateY(-2px);
+      border-color: rgba(129, 140, 248, 0.7);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.16);
+    }
 
-		.code .download a {
-			display: block;
-			margin: 0 15px;
-			float: left;
-		}
+    .container:first-of-type {
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
 
-		.code strong a {
-			color: #000;
-		}
+    .top-nav {
+      max-width: 900px;
+      margin: 4px auto 16px;
+      padding: 8px 18px;
+      border-radius: 18px;
+      background: rgba(248, 250, 252, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.09);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      position: sticky;
+      top: 8px;
+      z-index: 20;
+    }
 
-		.external a {
-			margin: 0 10px;
-		}
+    .top-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
 
-		.external a.first {
-			margin: 0 10px 0 0;
-		}
-
-		table.gridtable {
-			/* width: 508px; */
-			font-family: verdana, arial, sans-serif;
-			font-size: 14px;
-			color: #000000;
-			border-width: 1px;
-			border-color: #666666;
-			border-collapse: collapse;
-		}
-
-		table.gridtable th {
-			border-width: 1px;
-			padding: 8px;
-			border-style: solid;
-			border-color: #666666;
-			background-color: #a2c4e2;
-		}
-
-		table.gridtable td {
-			border-width: 1px;
-			padding: 8px;
-			border-style: solid;
-			border-color: #666666;
-			background-color: #ffffff;
-		}
-
-		/* CSS Style to Hide Div*/
-		.popup {
-			display: none;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 450px;
-			height: 250px;
-			background-color: #ffffff;
-			padding: 10px;
-			border: 3px solid #ccc;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			z-index: 9999;
-		}
-
-		button {
-			background-color: #6159f4;
-			border: none;
-			color: white;
-			cursor: pointer;
-		}
-
-		button:hover {
-			background-color: #061af4;
-		}
-
-		/* 固定宽度的左侧div */
-		.left-div {
-			width: 200px;
-			text-align: center;
-			border-right: 1px solid #ddd;
-		}
-		.icon-link {
-		text-decoration: none;
-		}
-		.icon-link img {
-  		transition: transform 0.3s ease, box-shadow 0.3s ease;
-  		border-radius: 8px;
-		}
-		.icon-link img:hover {
-  		transform: scale(1.05) rotate(2deg);
-  		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-		}
-		.icon-link:hover {
-		text-decoration: none; /* 防止 hover 时出现下划线 */
-		}
-	</style>
-	<script async="" src="./homepage_files/analytics.js"></script>
-	<!-- dlzhou.top Baidu tongji analytics -->
-	<script>
-		var _hmt = _hmt || [];
-		(function () {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?0c9a7ae10846194abdf9a4ac82c8a92e";
-			var s = document.getElementsByTagName("script")[0];
-			s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159825357-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-159825357-1');
-	</script>
+    .top-nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary-color);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
 
 
+    .top-nav-links {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .top-nav-links a {
+      font-size: 13px;
+      color: var(--muted-text);
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: transparent;
+      border: 1px solid transparent;
+      font-weight: 500;
+    }
+
+    .top-nav-links a:hover {
+      text-decoration: none;
+      color: var(--primary-color);
+      background: var(--accent-color-soft);
+      border-color: rgba(129, 140, 248, 0.75);
+    }
+
+    .site-header {
+      background: transparent;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding-top: 4px;
+      padding-bottom: 6px;
+    }
+
+    .header-photo {
+      flex-shrink: 0;
+      text-align: center;
+    }
+
+    #me {
+      border-radius: 18px;
+      max-width: 210px;
+      width: 100%;
+      height: auto;
+      display: block;
+      box-shadow: 0 18px 42px rgba(15, 23, 42, 0.25);
+      border: 3px solid #ffffff;
+    }
+
+    .header-bio {
+      flex: 1;
+    }
+
+    .name-cn {
+      font-size: 20px;
+      font-family: "SF Pro SC", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "微软雅黑", system-ui, sans-serif;
+      font-weight: 600;
+      color: #111827;
+      margin-left: 8px;
+      white-space: nowrap;
+    }
+
+    .name-cn-angle {
+      color: #ef4444;
+    }
+
+    .degrees {
+      margin-top: 4px;
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: var(--muted-text);
+    }
+
+    .affiliation {
+      margin-top: 2px;
+      font-size: 15px;
+      color: var(--muted-text);
+    }
+
+    .external {
+      margin-top: 14px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .external a {
+      margin: 0;
+    }
+
+    .contact-note {
+      margin-top: 14px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--primary-color);
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: linear-gradient(
+        135deg,
+        rgba(79, 70, 229, 0.06),
+        rgba(59, 130, 246, 0.04)
+      );
+      border: 1px dashed rgba(129, 140, 248, 0.7);
+    }
+
+    .section {
+      margin-top: 6px;
+    }
+
+    .section:last-of-type {
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      color: var(--text-color);
+    }
+
+    .publication {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 18px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, #f9fafb, #f3f4ff);
+      border: 1px solid rgba(191, 219, 254, 0.9);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .publication:hover {
+      transform: translateY(-3px);
+      background: #ffffff;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+    }
+
+    .publication-logo {
+      flex-shrink: 0;
+      width: 200px;
+      max-width: 38%;
+      text-align: center;
+      border-right: 1px solid rgba(199, 210, 254, 0.9);
+      padding-right: 12px;
+    }
+
+    .publication-logo img {
+      max-width: 100%;
+      height: auto;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+    }
+
+    .publication-content {
+      flex: 1;
+    }
+
+    .publication strong a {
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    .publication p {
+      margin-bottom: 0.45em;
+    }
+
+    .publication em {
+      font-style: italic;
+      color: var(--muted-text);
+      font-size: 0.9em;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-link {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background-color: var(--accent-color);
+      color: #fff;
+      font-size: 0.78em;
+      margin-right: 8px;
+      margin-top: 2px;
+      border: 1px solid transparent;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+      box-shadow: 0 5px 14px rgba(79, 70, 229, 0.3);
+      transition: background-color 0.18s ease, box-shadow 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .btn-link:hover {
+      background-color: var(--accent-color-hover);
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 30px rgba(55, 48, 163, 0.5);
+    }
+
+    .btn-link:visited {
+      color: #fff;
+    }
+
+    /* Table style (kept in case you use it later) */
+    table.gridtable {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      font-size: 14px;
+      color: #000000;
+      border-width: 1px;
+      border-color: #666666;
+      border-collapse: collapse;
+    }
+
+    table.gridtable th {
+      border-width: 1px;
+      padding: 8px;
+      border-style: solid;
+      border-color: #666666;
+      background-color: #a2c4e2;
+    }
+
+    table.gridtable td {
+      border-width: 1px;
+      padding: 8px;
+      border-style: solid;
+      border-color: #666666;
+      background-color: #ffffff;
+    }
+
+    /* Popup style preserved (currently unused) */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 450px;
+      height: 250px;
+      background-color: #ffffff;
+      padding: 10px;
+      border: 3px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+    }
+
+    button {
+      background-color: var(--accent-color);
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--accent-color-hover);
+    }
+
+    ul {
+      margin: 0.3em 0 0.8em 1.2em;
+      color: var(--text-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0 10px;
+      color: var(--muted-text);
+      font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 14px 10px 24px;
+      }
+
+      .container {
+        padding: 18px 16px 20px;
+        border-radius: 16px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+      }
+
+      .header-bio {
+        text-align: center;
+      }
+
+      .name-cn {
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
+      }
+
+      .external {
+        justify-content: center;
+      }
+
+      .publication {
+        flex-direction: column;
+        padding: 14px 14px 16px;
+      }
+
+      .publication-logo {
+        width: 100%;
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(199, 210, 254, 0.9);
+        padding-right: 0;
+        padding-bottom: 10px;
+      }
+
+      .publication-content {
+        width: 100%;
+      }
+
+      .top-nav {
+        padding: 8px 14px;
+        margin-top: 4px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        position: static;
+      }
+
+      .top-nav-inner {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .top-nav-links {
+        flex: 1;
+        justify-content: flex-end;
+      }
+    }
+  </style>
+
+  <script async src="./homepage_files/analytics.js"></script>
+  <!-- dlzhou.top Baidu tongji analytics -->
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0c9a7ae10846194abdf9a4ac82c8a92e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159825357-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "UA-159825357-1");
+  </script>
 </head>
 
 <body>
-	<div class="title">
-		<div id="sidebar"><img src="./homepage_imgs/me.jpeg" vspace="40 px" width="215 px" id="me" itemprop="photo">
-		</div>
-		<div id="bio">
-			<br>
-			<h1>
-				<span itemprop="name">Dongliang Zhou&nbsp; <font size="5" face="微软雅黑">
-						<font color="#FF0000">
-							< </font>周栋梁&nbsp;/>
-						</font> </span>
-			</h1>
-			<br>
-			<p style="line-height:23px;">
-				B.Eng. CS., Ph.D. CS.
-				<br>
-				<br>
-				Harbin Institute of Technology, Shenzhen
-				<br>
-			</p>
-			<br>
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <div class="top-nav-brand">
+        <span class="brand-text">Dongliang Zhou</span>
+      </div>
+      <div class="top-nav-links">
+        <a href="#short-bio-heading">Bio</a>
+        <a href="#publications-heading">Publications</a>
+        <a href="#services-heading">Services</a>
+      </div>
+    </div>
+  </nav>
 
-			<p class="external">
-				<a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank">
-					<img 
-					  src="./homepage_assets/icons8-google-scholar-144.png" 
-					  alt="Google Scholar"
-					  style="height: 2.65em; vertical-align: middle;"
-					/>
-				  </a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-photo">
+        <img src="./homepage_imgs/me.jpeg" id="me" alt="Portrait of Dongliang Zhou" />
+      </div>
+      <div class="header-bio" id="bio">
+        <h1>
+          <span itemprop="name">
+            Dongliang Zhou
+            <span class="name-cn">
+              <span class="name-cn-angle">&lt;</span> 周栋梁 <span class="name-cn-angle">/&gt;</span>
+            </span>
+          </span>
+        </h1>
+        <div class="degrees">
+          B.Eng. CS., Ph.D. CS.
+        </div>
+        <div class="affiliation">
+          Harbin Institute of Technology, Shenzhen
+        </div>
 
-				<a class="icon-link" href="https://orcid.org/0000-0003-0361-8597" target="_blank">
-					<img 
-					  src="./homepage_assets/orcid.logo.icon.svg" 
-					  alt="ORCID"
-					  style="height: 2.3em; vertical-align: middle;"
-					/>
-				  </a>
-			</p>
-			<br>
-			<b>If you are interested in working with me on research or projects, you can email me at [zhou-dongliang at
-				outlook.com].</b>
-		</div>
+        <div class="external">
+          <a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank"
+            aria-label="Google Scholar">
+            <img src="./homepage_assets/icons8-google-scholar-144.png" alt="Google Scholar Profile"
+              style="height: 2.65em;" />
+          </a>
 
-	</div>
-	<div class="container">
-		<h2>Short Bio</h2>
-		<p style="text-align:justify; text-justify:inter-ideograph;">
-			Dongliang Zhou is a postdoctoral researcher at Harbin Institute of Technology, Shenzhen, working under the
-			supervision of Prof.
-				Liqiang Nie. He obtained his doctoral degree from the School of Computer Science and Technology at
-			the same institution. His research interests include multimedia computing, multimodal learning, and generative models. In addition to his research, he serves as an associate editor for Applied Intelligence and as an editorial board member of Applied Soft Computing. He is also actively involved in mentoring undergraduate and graduate students from Harbin Institute of Technology, Peking University, etc., in
-			conducting scientific research.
-			<br>
-		</p>
-	</div>
-	<div class="container">
-		<h2>Selected Publications</h2>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/ave-speech_logo.jpg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://doi.org/10.1109/THMS.2025.3585165" target="_blank">AVE Speech: A Comprehensive Multi-Modal Dataset for Speech Recognition Integrating Audio, Visual, and Electromyographic Signals</a>
-				</strong>
-				<br>
-				<br>
-				<b>Dongliang Zhou</b>, Yakun Zhang, Jinghan Wu, Xingyu Zhang, Liang Xie, and Erwei Yin <b><a href="https://huggingface.co/datasets/MML-Group/AVE-Speech" target="_blank"><button>Data</button></a></b> <a href="https://github.com/MML-Group/code4AVE-Speech" target="_blank"><button>Code</button></a></b> 
-				<br>
-				<br>
-				<em>IEEE Transactions on Human-Machine Systems, 2025</em>
-			</p>
-		</div>
-		<br>
+          <a class="icon-link" href="https://orcid.org/0000-0003-0361-8597" target="_blank" aria-label="ORCID">
+            <img src="./homepage_assets/orcid.logo.icon.svg" alt="ORCID Profile" style="height: 2.3em;" />
+          </a>
+        </div>
 
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/panogen++_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025001996" target="_blank">PanoGen++: Domain-Adapted Text-Guided Panoramic Environment Generation for Vision-and-Language Navigation</a>
-				</strong>
-				<br>
-				<br>
-				Sen Wang<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;,&#9993;</sup>, Liang Xie, Chao Xu, Ye Yan, and Erwei Yin
-				<br>
-				<br>
-				<em>Neural Networks, 2025</em>
-			</p>
-		</div>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/amcmr_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://link.springer.com/book/9783031810473" target="_blank">Advanced Multimodal Compatibility Modeling and Recommendation</a>
-				</strong>
-				<br>
-				<br>
-				Weili Guan, Xuemeng Song, <b>Dongliang Zhou</b>, and Liqiang Nie
-				<br>
-				<br>
-				<em>Springer Book, 2025</em>
-			</p>
-		</div>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/lipgen_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://arxiv.org/abs/2501.04204" target="_blank">LipGen: Viseme-Guided Lip Video Generation for Enhancing Visual Speech
-						Recognition</a>
-				</strong>
-				<br>
-				<br>
-				Bowen Hao<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;</sup>, Xiaojie Li,
-				Xingyu Zhang, Liang Xie, Jianlong Wu, and Erwei Yin
-				<br>
-				<br>
-				<em>IEEE International Conference on Acoustics, Speech, and Signal Processing, 2025</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/safevln_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://ieeexplore.ieee.org/document/10496163" target="_blank">Safe-VLN: Collision
-						Avoidance for
-						Vision-and-Language Navigation of Autonomous Robots Operating in Continuous Environments</a>
-				</strong>
-				<br>
-				<br>
-				Lu Yue, <b>Dongliang Zhou</b>, Liang Xie, Feitian Zhang, Ye Yan, and Erwei Yin
-				<br>
-				<br>
-				<em>IEEE Robotics and Automation Letters (also presented at IROS 2024 oral), 2024</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			
-			<div class="left-div">
-				<img src="./homepage_imgs/stnet_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://ieeexplore.ieee.org/document/10446336" target="_blank">Towards Intelligent Design:
-						A Self-Driven Framework for Collocated
-						Clothing Synthesis Leveraging Fashion Styles and Textures</a>
-					<b><a href="https://huggingface.co/datasets/Fashion-Intelligence/ST-Net-dataset" target="_blank"><button>Data</button></a></b>
-				</strong>
-				<br>
-				<br>
-				Minglong Dong<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;</sup>, Jianghong Ma, and Haijun Zhang
-				<br>
-				<br>
-				<em>IEEE International Conference on Acoustics, Speech, and Signal Processing, 2024</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/fcboostnet_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://doi.org/10.1145/3581783.3612036" target="_blank">FCBoost-Net: A Generative Network
-						for Synthesizing Multiple Collocated Outfits via Fashion Compatibility Boosting</a>
-				</strong>
-				<br>
-				<br>
-				<b>Dongliang Zhou</b>, Haijun Zhang, Jianghong Ma, Jicong Fan, and Zhao Zhang
-				<br>
-				<br>
-				<em>ACM International Conference on Multimedia, 2023</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/idgan_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://doi.org/10.1145/3581783.3612376" target="_blank">Toward Intelligent Interactive
-						Design: A Generation Framework Based on Cross-domain Fashion Elements</a>
-				</strong>
-				<br>
-				<br>
-				Jianyang Shi, Haijun Zhang, <b>Dongliang Zhou</b>, and Zhao Zhang
-				<br>
-				<br>
-				<em>ACM International Conference on Multimedia, 2023</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/bcgan_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://ieeexplore.ieee.org/abstract/document/10261301/" target="_blank">BC-GAN: A
-						Generative Adversarial Network for Synthesizing a Batch of Collocated Clothing</a>
-				</strong>
-				<br>
-				<br>
-				<b>Dongliang Zhou</b>, Haijun Zhang, Jianghong Ma, and Jianyang Shi
-				<br>
-				<br>
-				<em>IEEE Transactions on Circuits and Systems for Video Technology, 2024</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/coutfitgan_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://ieeexplore.ieee.org/document/9804781" target="_blank">COutfitGAN: Learning to
-						Synthesize Compatible Outfits Supervised by Silhouette Masks and
-						Fashion Styles</a>
-				</strong>
-				<br>
-				<br>
-				<b>Dongliang Zhou</b>, Haijun Zhang, Qun Li, Jianghong Ma, and Xiaofei Xu
-				<br>
-				<br>
-				<em>IEEE Transactions on Multimedia, 2023</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/outfitgan_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://ieeexplore.ieee.org/document/9893574" target="_blank">Learning to Synthesize
-						Compatible Fashion Items Using Semantic Alignment and Collocation
-						Classification: An Outfit Generation Framework</a>
-				</strong>
-				<br>
-				<br>
-				<b>Dongliang Zhou</b>, Haijun Zhang, Kai Yang, Linlin Liu, Han Yan, Xiaofei Xu, Zhao Zhang, and
-				Shuicheng
-				Yan
-				<br>
-				<br>
-				<em>IEEE Transactions on Neural Networks and Learning Systems, 2024</em>
-			</p>
-		</div>
-		<br>
-		<br>
-		<div class="publication">
-			<div class="left-div">
-				<img src="./homepage_imgs/ai_design_logo.jpeg" class="publogo" width="200 px">
-			</div>
-			<p>
-				<strong>
-					<a href="https://ieeexplore.ieee.org/abstract/document/9693190" target="_blank">Toward Intelligent
-						Design: An AI-based Fashion Designer Using Generative Adversarial
-						Networks Aided by Sketch and Rendering Generators</a>
-				</strong>
-				<br>
-				<br>
-				Han Yan, Haijun Zhang, Linlin Liu, <b>Dongliang Zhou</b>, Xiaofei Xu, Zhao Zhang, and Shuicheng Yan
-				<br>
-				<br>
-				<em>IEEE Transactions on Multimedia, 2023</em>
-			</p>
-		</div>
-	</div>
-	<br>
-	<div class="container">
-		<h2>Professional Services</h2>
-		<h4>Editorial Roles</h4>
-		<ul>
-			<li>Associate Editor, Applied Intelligence (JCR Q2) </li>
-			<li>Editorial Board Member, Applied Soft Computing (JCR Q1) </li>
-		</ul>
-		<h4>Area Chair (AC) </h4>
-		<ul>
-			<li>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2026</li>
-			<li>International Joint Conference on Neural Networks (IJCNN) 2025</li>			
-		</ul>
-		<h4>Conference/Journal Reviewer</h4>
-		<ul>
-			<li>CVPR, ACM MM, IJCAI, etc.</li>
-			<li>IJCV, IEEE TIP, TCYB, TNNLS, TMM, TCSVT, TII, TASE, TIM, etc.</li>
-		</ul>
-	</div>
+        <p class="contact-note">
+          If you are interested in working with me on research or projects, you can email me at [zhou-dongliang at
+          outlook.com].
+        </p>
+      </div>
+    </div>
+  </header>
 
-	<center>
-		<p>
-		<div id="clustrmaps-widget" style="width:5%" align=center>
-			<script type="text/javascript" id="clstr_globe"
-				src="//clustrmaps.com/globe.js?d=eYLISWCMUdRsDU5uGpsG-lBm2ILDebhnZzW9FxwaqMg"></script>
-		</div>
-		</p>
-	</center>
+  <main>
+    <section class="container section" aria-labelledby="short-bio-heading">
+      <h2 id="short-bio-heading">Short Bio</h2>
+      <p>
+        Dongliang Zhou is a postdoctoral researcher at Harbin Institute of Technology, Shenzhen, working under the
+        supervision of Prof. Liqiang Nie. He obtained his doctoral degree from the School of Computer Science and
+        Technology at the same institution. His research interests include multimedia computing, multimodal
+        learning, and generative models. In addition to his research, he serves as an associate editor for Applied
+        Intelligence and as an editorial board member of Applied Soft Computing. He is also actively involved in
+        mentoring undergraduate and graduate students from Harbin Institute of Technology, Peking University, etc.,
+        in conducting scientific research.
+      </p>
+    </section>
+
+    <section class="container section" aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Selected Publications</h2>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/ave-speech_logo.jpg" alt="AVE Speech logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://doi.org/10.1109/THMS.2025.3585165" target="_blank">
+                AVE Speech: A Comprehensive Multi-Modal Dataset for Speech Recognition Integrating Audio, Visual, and
+                Electromyographic Signals
+              </a>
+            </strong>
+          </p>
+          <p>
+            <b>Dongliang Zhou</b>, Yakun Zhang, Jinghan Wu, Xingyu Zhang, Liang Xie, and Erwei Yin
+          </p>
+          <p>
+            <a href="https://huggingface.co/datasets/MML-Group/AVE-Speech" target="_blank" class="btn-link">Data</a>
+            <a href="https://github.com/MML-Group/code4AVE-Speech" target="_blank" class="btn-link">Code</a>
+          </p>
+          <p>
+            <em>IEEE Transactions on Human-Machine Systems, 2025</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/panogen++_logo.jpeg" alt="PanoGen++ logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025001996" target="_blank">
+                PanoGen++: Domain-Adapted Text-Guided Panoramic Environment Generation for Vision-and-Language
+                Navigation
+              </a>
+            </strong>
+          </p>
+          <p>
+            Sen Wang<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;,&#9993;</sup>, Liang Xie, Chao Xu, Ye Yan, and
+            Erwei Yin
+          </p>
+          <p>
+            <em>Neural Networks, 2025</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/amcmr_logo.jpeg" alt="Advanced Multimodal Compatibility Modeling and Recommendation logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://link.springer.com/book/9783031810473" target="_blank">
+                Advanced Multimodal Compatibility Modeling and Recommendation
+              </a>
+            </strong>
+          </p>
+          <p>
+            Weili Guan, Xuemeng Song, <b>Dongliang Zhou</b>, and Liqiang Nie
+          </p>
+          <p>
+            <em>Springer Book, 2025</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/lipgen_logo.jpeg" alt="LipGen logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://arxiv.org/abs/2501.04204" target="_blank">
+                LipGen: Viseme-Guided Lip Video Generation for Enhancing Visual Speech Recognition
+              </a>
+            </strong>
+          </p>
+          <p>
+            Bowen Hao<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;</sup>, Xiaojie Li, Xingyu Zhang, Liang Xie,
+            Jianlong Wu, and Erwei Yin
+          </p>
+          <p>
+            <em>IEEE International Conference on Acoustics, Speech, and Signal Processing, 2025</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/safevln_logo.jpeg" alt="Safe-VLN logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://ieeexplore.ieee.org/document/10496163" target="_blank">
+                Safe-VLN: Collision Avoidance for Vision-and-Language Navigation of Autonomous Robots Operating in
+                Continuous Environments
+              </a>
+            </strong>
+          </p>
+          <p>
+            Lu Yue, <b>Dongliang Zhou</b>, Liang Xie, Feitian Zhang, Ye Yan, and Erwei Yin
+          </p>
+          <p>
+            <em>IEEE Robotics and Automation Letters (also presented at IROS 2024 oral), 2024</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/stnet_logo.jpeg" alt="ST-Net logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://ieeexplore.ieee.org/document/10446336" target="_blank">
+                Towards Intelligent Design: A Self-Driven Framework for Collocated Clothing Synthesis Leveraging Fashion
+                Styles and Textures
+              </a>
+            </strong>
+          </p>
+          <p>
+            Minglong Dong<sup>&#8224;</sup>, <b>Dongliang Zhou</b><sup>&#8224;</sup>, Jianghong Ma, and Haijun Zhang
+          </p>
+          <p>
+            <a href="https://huggingface.co/datasets/Fashion-Intelligence/ST-Net-dataset" target="_blank"
+              class="btn-link">Data</a>
+          </p>
+          <p>
+            <em>IEEE International Conference on Acoustics, Speech, and Signal Processing, 2024</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/fcboostnet_logo.jpeg" alt="FCBoost-Net logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://doi.org/10.1145/3581783.3612036" target="_blank">
+                FCBoost-Net: A Generative Network for Synthesizing Multiple Collocated Outfits via Fashion Compatibility
+                Boosting
+              </a>
+            </strong>
+          </p>
+          <p>
+            <b>Dongliang Zhou</b>, Haijun Zhang, Jianghong Ma, Jicong Fan, and Zhao Zhang
+          </p>
+          <p>
+            <em>ACM International Conference on Multimedia, 2023</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/idgan_logo.jpeg" alt="Cross-domain Fashion Elements framework logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://doi.org/10.1145/3581783.3612376" target="_blank">
+                Toward Intelligent Interactive Design: A Generation Framework Based on Cross-domain Fashion Elements
+              </a>
+            </strong>
+          </p>
+          <p>
+            Jianyang Shi, Haijun Zhang, <b>Dongliang Zhou</b>, and Zhao Zhang
+          </p>
+          <p>
+            <em>ACM International Conference on Multimedia, 2023</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/bcgan_logo.jpeg" alt="BC-GAN logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://ieeexplore.ieee.org/abstract/document/10261301/" target="_blank">
+                BC-GAN: A Generative Adversarial Network for Synthesizing a Batch of Collocated Clothing
+              </a>
+            </strong>
+          </p>
+          <p>
+            <b>Dongliang Zhou</b>, Haijun Zhang, Jianghong Ma, and Jianyang Shi
+          </p>
+          <p>
+            <em>IEEE Transactions on Circuits and Systems for Video Technology, 2024</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/coutfitgan_logo.jpeg" alt="COutfitGAN logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://ieeexplore.ieee.org/document/9804781" target="_blank">
+                COutfitGAN: Learning to Synthesize Compatible Outfits Supervised by Silhouette Masks and Fashion Styles
+              </a>
+            </strong>
+          </p>
+          <p>
+            <b>Dongliang Zhou</b>, Haijun Zhang, Qun Li, Jianghong Ma, and Xiaofei Xu
+          </p>
+          <p>
+            <em>IEEE Transactions on Multimedia, 2023</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/outfitgan_logo.jpeg" alt="Outfit generation framework logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://ieeexplore.ieee.org/document/9893574" target="_blank">
+                Learning to Synthesize Compatible Fashion Items Using Semantic Alignment and Collocation Classification:
+                An Outfit Generation Framework
+              </a>
+            </strong>
+          </p>
+          <p>
+            <b>Dongliang Zhou</b>, Haijun Zhang, Kai Yang, Linlin Liu, Han Yan, Xiaofei Xu, Zhao Zhang, and Shuicheng
+            Yan
+          </p>
+          <p>
+            <em>IEEE Transactions on Neural Networks and Learning Systems, 2024</em>
+          </p>
+        </div>
+      </article>
+
+      <article class="publication">
+        <div class="publication-logo">
+          <img src="./homepage_imgs/ai_design_logo.jpeg" alt="AI-based Fashion Designer logo" />
+        </div>
+        <div class="publication-content">
+          <p>
+            <strong>
+              <a href="https://ieeexplore.ieee.org/abstract/document/9693190" target="_blank">
+                Toward Intelligent Design: An AI-based Fashion Designer Using Generative Adversarial Networks Aided by
+                Sketch and Rendering Generators
+              </a>
+            </strong>
+          </p>
+          <p>
+            Han Yan, Haijun Zhang, Linlin Liu, <b>Dongliang Zhou</b>, Xiaofei Xu, Zhao Zhang, and Shuicheng Yan
+          </p>
+          <p>
+            <em>IEEE Transactions on Multimedia, 2023</em>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="container section" aria-labelledby="services-heading">
+      <h2 id="services-heading">Professional Services</h2>
+
+      <h4>Editorial Roles</h4>
+      <ul>
+        <li>Associate Editor, Applied Intelligence (JCR Q2)</li>
+        <li>Editorial Board Member, Applied Soft Computing (JCR Q1)</li>
+      </ul>
+
+      <h4>Area Chair (AC)</h4>
+      <ul>
+        <li>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2026</li>
+        <li>International Joint Conference on Neural Networks (IJCNN) 2025</li>
+      </ul>
+
+      <h4>Conference/Journal Reviewer</h4>
+      <ul>
+        <li>CVPR, ACM MM, IJCAI, etc.</li>
+        <li>IJCV, IEEE TIP, TCYB, TNNLS, TMM, TCSVT, TII, TASE, TIM, etc.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div id="clustrmaps-widget" style="width: 5%; margin: 0 auto;" align="center">
+      <script type="text/javascript" id="clstr_globe"
+        src="//clustrmaps.com/globe.js?d=eYLISWCMUdRsDU5uGpsG-lBm2ILDebhnZzW9FxwaqMg"></script>
+    </div>
+  </footer>
 </body>
 
 </html>
