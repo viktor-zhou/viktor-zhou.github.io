@@ -199,6 +199,22 @@
       text-transform: uppercase;
     }
 
+    .top-nav-brand a {
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      border-bottom: none;
+      transition: color 0.15s ease;
+    }
+
+    .top-nav-brand a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+
 
     .top-nav-links {
       display: flex;
@@ -565,7 +581,7 @@
   <nav class="top-nav">
     <div class="top-nav-inner">
       <div class="top-nav-brand">
-        <span class="brand-text">Dongliang Zhou</span>
+        <span class="brand-text">Dongliang Zhou <span style="color: var(--muted-text);">|</span> <a href="index_zh.html">中文</a></span>
       </div>
       <div class="top-nav-links">
         <a href="#short-bio-heading">Bio</a>
@@ -596,16 +612,24 @@
           Tianjin University
         </div>
 
-        <div class="external">
+         <div class="external">
           <a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank"
             aria-label="Google Scholar">
             <img src="./homepage_assets/icons8-google-scholar-144.png" alt="Google Scholar Profile"
               style="height: 2.65em;" />
           </a>
 
-          <a class="icon-link" href="https://orcid.org/0000-0003-0361-8597" target="_blank" aria-label="ORCID">
-            <img src="./homepage_assets/orcid.logo.icon.svg" alt="ORCID Profile" style="height: 2.3em;" />
+           <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" aria-label="HF">
+            <img src="./homepage_assets/huggingface_logo-noborder.svg" alt="Huggingface" style="height: 2.6em;" />
           </a>
+
+          <a class="icon-link" href="https://github.com/MML-Group" target="_blank" aria-label="GitHub">
+            <img src="./homepage_assets/github.icon.svg" alt="GitHub" style="height: 2.6em;" />
+          </a>
+
+          <!-- <a class="icon-link" href="https://orcid.org/0000-0003-0361-8597" target="_blank" aria-label="ORCID">
+            <img src="./homepage_assets/orcid.logo.icon.svg" alt="ORCID Profile" style="height: 2.3em;" />
+          </a> -->
         </div>
 
         <p class="contact-note">
