@@ -5,8 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index,follow" />
-  <meta name="description"
-    content="周栋梁，天津大学人工智能学院副研究员，研究方向包括多媒体计算、多模态学习、图像生成、具身智能和生成式模型。" />
+  <meta name="description" content="周栋梁，天津大学人工智能学院副研究员，研究方向包括多媒体计算、多模态学习、图像生成、具身智能和生成式模型。" />
   <meta name="keywords"
     content="周栋梁, Dongliang Zhou, 天津大学, Tianjin University, 人工智能学院, 多媒体计算, 多模态学习, 生成式模型, 图像生成, 具身智能" />
   <link rel="author" href="https://www.viktor-zhou.com/" />
@@ -317,11 +316,9 @@
       color: var(--primary-color);
       padding: 10px 14px;
       border-radius: 12px;
-      background: linear-gradient(
-        135deg,
-        rgba(79, 70, 229, 0.06),
-        rgba(59, 130, 246, 0.04)
-      );
+      background: linear-gradient(135deg,
+          rgba(79, 70, 229, 0.06),
+          rgba(59, 130, 246, 0.04));
       border: 1px dashed rgba(129, 140, 248, 0.7);
     }
 
@@ -341,11 +338,9 @@
       margin-top: 18px;
       padding: 18px 20px;
       border-radius: 18px 22px 16px 20px;
-      background: linear-gradient(
-        135deg,
-        rgba(255, 251, 235, 0.96),
-        rgba(239, 246, 255, 0.9)
-      );
+      background: linear-gradient(135deg,
+          rgba(255, 251, 235, 0.96),
+          rgba(239, 246, 255, 0.9));
       border: 2px dashed rgba(99, 102, 241, 0.45);
       box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
       position: relative;
@@ -395,9 +390,12 @@
     }
 
     @keyframes new-badge-pulse {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: scale(1);
       }
+
       50% {
         transform: scale(1.08);
       }
@@ -554,6 +552,7 @@
       color: var(--muted-text);
       font-size: 13px;
     }
+
     @media (max-width: 720px) {
       body {
         padding: 14px 10px 24px;
@@ -644,17 +643,17 @@
   </script>
   <script>
 
-  fetch("./publications.html")
+    fetch("./publications.html")
 
-    .then(response => response.text())
+      .then(response => response.text())
 
-    .then(html => {
+      .then(html => {
 
-      document.getElementById("publications-list").innerHTML = html;
+        document.getElementById("publications-list").innerHTML = html;
 
-    });
+      });
 
-</script>
+  </script>
 </head>
 
 <body>
@@ -699,7 +698,7 @@
               style="height: 2.65em;" />
           </a>
 
-           <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" aria-label="HF">
+          <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" aria-label="HF">
             <img src="./homepage_assets/huggingface_logo-noborder.svg" alt="Huggingface" style="height: 2.6em;" />
           </a>
 
@@ -713,7 +712,7 @@
         </div>
 
         <p class="contact-note">
-           如果您对科研合作或项目合作感兴趣，欢迎通过邮箱联系我：[zhou-dongliang at outlook.com]。
+          如果您对科研合作或项目合作感兴趣，欢迎通过邮箱联系我：[zhou-dongliang at outlook.com]。
         </p>
       </div>
     </div>
@@ -723,20 +722,29 @@
     <section class="container section" aria-labelledby="short-bio-heading">
       <h2 id="short-bio-heading">个人简介</h2>
       <p>
-        周栋梁，博士/博士后，IEEE高级会员，现为天津大学人工智能学院副研究员（教研岗）。于哈尔滨工业大学（深圳）获得计算机科学与技术博士学位，并在该校从事博士后研究工作，合作导师为聂礼强教授。研究方向包括多媒体计算、多模态学习以及生成式模型。主持博士后面上基金项目和博士后国资计划项目各1项，主持中央***委重点项目课题1项，参与多项国家自然科学基金仪器专项、联合基金和面上项目，在 CCF A 类期刊/会议以及 IEEE Trans. 发表论文10余篇，发表学术专著一部。目前担任CSIG视觉感知智能系统专委会执行委员，某IEEE国际标准工作组Vice Chair，Applied Intelligence 副编辑、Applied Soft Computing 编委等。
+        周栋梁，博士/博士后，IEEE高级会员，现为天津大学人工智能学院副研究员（教研岗）。于哈尔滨工业大学（深圳）获得计算机科学与技术博士学位，并在该校从事博士后研究工作，合作导师为聂礼强教授。研究方向包括多媒体计算、多模态学习以及生成式模型。主持博士后面上基金项目和博士后国资计划项目各1项，主持中央***委重点项目课题1项，参与多项国家自然科学基金仪器专项、联合基金和面上项目，在
+        CCF A 类期刊/会议以及 IEEE Trans. 发表论文10余篇，发表学术专著一部。目前担任CSIG视觉感知智能系统专委会执行委员，某IEEE国际标准工作组Vice Chair，Applied Intelligence
+        副编辑、Applied Soft Computing 编委等。
       </p>
       <section class="admissions-highlight" aria-labelledby="admissions-heading">
         <span class="new-badge">NEW</span>
-        <p><strong>研究生招生：</strong>每年招收硕士研究生2–3 名（智能科学与技术以及相应的电子信息专业（依托人工智能学院））。欢迎对学术研究有兴趣、勤奋踏实、积极主动、具有良好自驱力的同学联系我。课题组注重科研兴趣、研究投入与学术训练，适合有明确发展目标并愿意认真参与科研工作的同学。</p>
-        <p><strong>本科生科研：</strong>欢迎对科研有兴趣的本科生加入课题组，常年招募本科生参与科研项目。申请者原则上应具备以下条件：已修完《数据结构》、《计算机程序设计》等相关课程，或具有相应知识基础；熟练掌握至少一门编程语言；具备良好的沟通与协作能力；每周能够稳定投入不少于 20 小时。对于表现优秀且投入稳定的本科生，期望在 1–1.5 年内完成一项具有较高学术水平的研究工作。当前科研方向主要包括图像生成与具身智能，并以 CCF-A 或 ACM/IEEE Trans. 级别成果为努力目标。</p>
-        <p><strong>本科生竞赛：</strong>鼓励本科生参与各类学科竞赛，如中国大学生数学建模竞赛、美国大学生数学建模竞赛、“挑战杯”等。可提供相应指导和支持（本人具有上述比赛全国一等奖（序1）获奖经历），欢迎有相关基础或兴趣的同学了解与参与，亦支持跨学院组队合作。</p>
+        <p><strong>研究生招生：</strong>每年招收硕士研究生2–3
+          名（智能科学与技术以及相应的电子信息专业（依托人工智能学院））。欢迎对学术研究有兴趣、勤奋踏实、积极主动、具有良好自驱力的同学联系我。课题组注重科研兴趣、研究投入与学术训练，适合有明确发展目标并愿意认真参与科研工作的同学。
+        </p>
+        <p>
+          <strong>本科生科研：</strong>欢迎对科研有兴趣的本科生加入课题组，常年招募本科生参与科研项目。申请者原则上应具备以下条件：已修完《数据结构》、《计算机程序设计》等相关课程，或具有相应知识基础；熟练掌握至少一门编程语言；具备良好的沟通与协作能力；每周能够稳定投入不少于
+          20 小时。对于表现优秀且投入稳定的本科生，期望在 1–1.5 年内完成一项具有较高学术水平的研究工作。当前科研方向主要包括图像生成与具身智能，并以 CCF-A 或 ACM/IEEE Trans. 级别成果为努力目标。
+        </p>
+        <p>
+          <strong>本科生竞赛：</strong>鼓励本科生参与各类学科竞赛，如中国大学生数学建模竞赛、美国大学生数学建模竞赛、“挑战杯”等。可提供相应指导和支持（本人具有上述比赛全国一等奖（序1）获奖经历），欢迎有相关基础或兴趣的同学了解与参与，亦支持跨学院组队合作。
+        </p>
       </section>
     </section>
 
     <section class="container section" aria-labelledby="publications-heading">
       <h2 id="publications-heading">科研工作</h2>
       <div id="publications-list"></div>
-          </section>
+    </section>
 
     <section class="container section" aria-labelledby="services-heading">
       <h2 id="services-heading">专业服务</h2>

@@ -7,8 +7,7 @@
   <meta name="robots" content="index,follow" />
   <meta name="description"
     content="Dongliang Zhou is an Associate Research Professor at Tianjin University, focusing on multimedia computing, multimodal learning, and generative models." />
-  <meta name="keywords"
-    content="Dongliang Zhou, 周栋梁, Tianjin University,天津大学" />
+  <meta name="keywords" content="Dongliang Zhou, 周栋梁, Tianjin University,天津大学" />
   <link rel="author" href="https://www.viktor-zhou.com/" />
   <link rel="shortcut icon" href="./homepage_imgs/d.zhou.ico" type="image/x-icon" />
   <title>Dongliang's Homepage</title>
@@ -317,11 +316,9 @@
       color: var(--primary-color);
       padding: 10px 14px;
       border-radius: 12px;
-      background: linear-gradient(
-        135deg,
-        rgba(79, 70, 229, 0.06),
-        rgba(59, 130, 246, 0.04)
-      );
+      background: linear-gradient(135deg,
+          rgba(79, 70, 229, 0.06),
+          rgba(59, 130, 246, 0.04));
       border: 1px dashed rgba(129, 140, 248, 0.7);
     }
 
@@ -580,24 +577,25 @@
   </script>
   <script>
 
-  fetch("./publications.html")
+    fetch("./publications.html")
 
-    .then(response => response.text())
+      .then(response => response.text())
 
-    .then(html => {
+      .then(html => {
 
-      document.getElementById("publications-list").innerHTML = html;
+        document.getElementById("publications-list").innerHTML = html;
 
-    });
+      });
 
-</script>
+  </script>
 </head>
 
 <body>
   <nav class="top-nav">
     <div class="top-nav-inner">
       <div class="top-nav-brand">
-        <span class="brand-text">Dongliang Zhou <span style="color: var(--muted-text);">|</span> <a href="index_zh.html">中文</a></span>
+        <span class="brand-text">Dongliang Zhou <span style="color: var(--muted-text);">|</span> <a
+            href="index_zh.html">中文</a></span>
       </div>
       <div class="top-nav-links">
         <a href="#short-bio-heading">Bio</a>
@@ -628,14 +626,14 @@
           Tianjin University
         </div>
 
-         <div class="external">
+        <div class="external">
           <a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank"
             aria-label="Google Scholar">
             <img src="./homepage_assets/icons8-google-scholar-144.png" alt="Google Scholar Profile"
               style="height: 2.65em;" />
           </a>
 
-           <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" aria-label="HF">
+          <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" aria-label="HF">
             <img src="./homepage_assets/huggingface_logo-noborder.svg" alt="Huggingface" style="height: 2.6em;" />
           </a>
 
@@ -660,13 +658,17 @@
     <section class="container section" aria-labelledby="short-bio-heading">
       <h2 id="short-bio-heading">Short Bio</h2>
       <p>
-        Dongliang Zhou (IEEE Senior Member) is an Associate Research Professor at Tianjin University. He received his Ph.D. degree in Computer Science and Technology from Harbin Institute of Technology, Shenzhen, where he also worked as a postdoctoral researcher under the supervision of Prof. Liqiang Nie. His research interests include multimedia computing, multimodal learning, and generative models. He currently serves as an Associate Editor for Applied Intelligence and as a member of the Editorial Board of Applied Soft Computing.
+        Dongliang Zhou (IEEE Senior Member) is an Associate Research Professor at Tianjin University. He received his
+        Ph.D. degree in Computer Science and Technology from Harbin Institute of Technology, Shenzhen, where he also
+        worked as a postdoctoral researcher under the supervision of Prof. Liqiang Nie. His research interests include
+        multimedia computing, multimodal learning, and generative models. He currently serves as an Associate Editor for
+        Applied Intelligence and as a member of the Editorial Board of Applied Soft Computing.
       </p>
     </section>
 
     <section class="container section" aria-labelledby="publications-heading">
       <h2 id="publications-heading">Selected Publications</h2>
-      <div id="publications-list"></div>      
+      <div id="publications-list"></div>
     </section>
 
     <section class="container section" aria-labelledby="services-heading">
