@@ -30,28 +30,3 @@ document.addEventListener("DOMContentLoaded", function loadPublications() {
       }
     });
 });
-
-(function initializeVisitorGlobe() {
-  var attempts = 0;
-  var timer = window.setInterval(function () {
-    var globeInner = document.querySelector(".mmvst_inner");
-    var globeLink;
-
-    attempts += 1;
-
-    if (globeInner) {
-      globeLink = document.querySelector("#mmvst_a");
-
-      if (globeLink) {
-        globeLink.href = "https://mapmyvisitors.com/web/1c6nf";
-        globeLink.target = "_blank";
-        globeLink.rel = "noopener noreferrer";
-      }
-
-      window.clearInterval(timer);
-      window.dispatchEvent(new Event("load"));
-    } else if (attempts >= 100) {
-      window.clearInterval(timer);
-    }
-  }, 100);
-}());
