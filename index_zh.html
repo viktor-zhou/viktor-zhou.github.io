@@ -167,6 +167,12 @@
       margin-bottom: 24px;
     }
 
+    .visitor-globe {
+      width: 200px;
+      min-height: 200px;
+      margin: 0 auto;
+    }
+
     .top-nav {
       max-width: 900px;
       margin: 4px auto 16px;
@@ -761,6 +767,37 @@
         <li>CVPR、ACM MM、IJCAI等</li>
         <li>IJCV、IEEE TIP、TCYB、TNNLS、TMM、TCSVT、TII、TASE、TIM等</li>
       </ul>
+    </section>
+
+    <section class="container" aria-label="访客地图">
+      <div class="visitor-globe">
+        <script id="mmvst_globe"
+          src="https://mapmyvisitors.com/globe.js?d=1BAFui4YGS-FmkBf5PwRNDsje4XzcH-h1Z02tgTodj0"></script>
+        <script>
+          // MapMyVisitors 异步加载私有 jQuery，可能会错过 window.load 事件。
+          (function initializeVisitorGlobe() {
+            var attempts = 0;
+            var timer = window.setInterval(function () {
+              attempts += 1;
+
+              if (document.querySelector(".mmvst_inner")) {
+                var globeLink = document.querySelector("#mmvst_a");
+
+                if (globeLink) {
+                  globeLink.href = "https://mapmyvisitors.com/web/1c6nf";
+                  globeLink.target = "_blank";
+                  globeLink.rel = "noopener noreferrer";
+                }
+
+                window.clearInterval(timer);
+                window.dispatchEvent(new Event("load"));
+              } else if (attempts >= 100) {
+                window.clearInterval(timer);
+              }
+            }, 100);
+          }());
+        </script>
+      </div>
     </section>
   </main>
 
