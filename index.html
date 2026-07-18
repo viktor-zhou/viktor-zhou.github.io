@@ -697,6 +697,23 @@
       <div class="visitor-globe">
         <script id="mmvst_globe"
           src="https://mapmyvisitors.com/globe.js?d=1BAFui4YGS-FmkBf5PwRNDsje4XzcH-h1Z02tgTodj0"></script>
+        <script>
+          // MapMyVisitors loads its private jQuery asynchronously, so its
+          // window.load handler can be registered after the event has fired.
+          (function initializeVisitorGlobe() {
+            var attempts = 0;
+            var timer = window.setInterval(function () {
+              attempts += 1;
+
+              if (document.querySelector(".mmvst_inner")) {
+                window.clearInterval(timer);
+                window.dispatchEvent(new Event("load"));
+              } else if (attempts >= 100) {
+                window.clearInterval(timer);
+              }
+            }, 100);
+          }());
+        </script>
       </div>
     </section>
   </main>
