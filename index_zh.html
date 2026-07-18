@@ -8,14 +8,35 @@
   <meta name="description" content="周栋梁，天津大学人工智能学院副研究员，研究方向包括多媒体计算、多模态学习、图像生成、具身智能和生成式模型。" />
   <meta name="keywords"
     content="周栋梁, Dongliang Zhou, 天津大学, Tianjin University, 人工智能学院, 多媒体计算, 多模态学习, 生成式模型, 图像生成, 具身智能" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="周栋梁 — 个人学术主页" />
+  <meta property="og:description" content="天津大学人工智能学院副研究员，研究方向包括多媒体计算、多模态学习、图像生成、具身智能和生成式模型。" />
+  <meta property="og:url" content="https://www.viktor-zhou.com/index_zh.html" />
+  <meta property="og:image" content="https://www.viktor-zhou.com/homepage_imgs/me.jpeg" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="周栋梁 — 个人学术主页" />
+  <meta name="twitter:description" content="天津大学人工智能学院副研究员，研究方向包括多媒体计算、多模态学习、图像生成、具身智能和生成式模型。" />
+  <meta name="twitter:image" content="https://www.viktor-zhou.com/homepage_imgs/me.jpeg" />
   <link rel="author" href="https://www.viktor-zhou.com/" />
+  <link rel="canonical" href="https://www.viktor-zhou.com/index_zh.html" />
+  <link rel="alternate" hreflang="en" href="https://www.viktor-zhou.com/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://www.viktor-zhou.com/index_zh.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.viktor-zhou.com/" />
   <link rel="shortcut icon" href="./homepage_imgs/d.zhou.ico" type="image/x-icon" />
   <title>周栋梁的主页</title>
   <link rel="stylesheet" href="./assets/css/homepage.css" />
 
   <script async src="./homepage_files/analytics.js"></script>
-  <script src="./assets/js/homepage.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "UA-159825357-1");
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159825357-1"></script>
+  <script defer src="./assets/js/homepage.js"></script>
 </head>
 
 <body>
@@ -35,7 +56,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="header-photo">
-        <img src="./homepage_imgs/me.jpeg" id="me" alt="Portrait of Dongliang Zhou" />
+        <img src="./homepage_imgs/me.jpeg" id="me" alt="周栋梁的个人照片" width="758" height="868" fetchpriority="high" />
       </div>
       <div class="header-bio" id="bio">
         <h1>
@@ -54,17 +75,17 @@
         </div>
 
         <div class="external">
-          <a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank"
+          <a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank" rel="noopener noreferrer"
             aria-label="Google Scholar">
             <img src="./homepage_assets/icons8-google-scholar-144.png" alt="Google Scholar Profile"
               style="height: 2.65em;" />
           </a>
 
-          <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" aria-label="HF">
+          <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" rel="noopener noreferrer" aria-label="HF">
             <img src="./homepage_assets/huggingface_logo-noborder.svg" alt="Huggingface" style="height: 2.6em;" />
           </a>
 
-          <a class="icon-link" href="https://github.com/MML-Group" target="_blank" aria-label="GitHub">
+          <a class="icon-link" href="https://github.com/MML-Group" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <img src="./homepage_assets/github.icon.svg" alt="GitHub" style="height: 2.6em;" />
           </a>
 
@@ -102,20 +123,22 @@
 
     <section class="container section" aria-labelledby="publications-heading">
       <h2 id="publications-heading">科研工作</h2>
-      <div id="publications-list"></div>
+      <div id="publications-list" aria-live="polite">
+        <p class="publication-status">正在加载论文列表…</p>
+      </div>
     </section>
 
     <section class="container section" aria-labelledby="services-heading">
       <h2 id="services-heading">专业服务</h2>
 
-      <h4>编辑</h4>
+      <h3>编辑</h3>
       <ul>
         <li>副编辑, Applied Intelligence (JCR Q2)</li>
         <li>编委, Applied Soft Computing (JCR Q1)</li>
         <li>青年编委, 《智能系统学报》</li>
       </ul>
 
-      <h4>审稿</h4>
+      <h3>审稿</h3>
       <ul>
         <li>CVPR、ACM MM、IJCAI等</li>
         <li>IJCV、IEEE TIP、TCYB、TNNLS、TMM、TCSVT、TII、TASE、TIM等</li>

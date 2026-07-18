@@ -8,14 +8,37 @@
   <meta name="description"
     content="Dongliang Zhou is an Associate Research Professor at Tianjin University, focusing on multimedia computing, multimodal learning, and generative models." />
   <meta name="keywords" content="Dongliang Zhou, 周栋梁, Tianjin University,天津大学" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Dongliang Zhou — Academic Homepage" />
+  <meta property="og:description"
+    content="Associate Research Professor at Tianjin University, focusing on multimedia computing, multimodal learning, and generative models." />
+  <meta property="og:url" content="https://www.viktor-zhou.com/" />
+  <meta property="og:image" content="https://www.viktor-zhou.com/homepage_imgs/me.jpeg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Dongliang Zhou — Academic Homepage" />
+  <meta name="twitter:description"
+    content="Associate Research Professor at Tianjin University, focusing on multimedia computing, multimodal learning, and generative models." />
+  <meta name="twitter:image" content="https://www.viktor-zhou.com/homepage_imgs/me.jpeg" />
   <link rel="author" href="https://www.viktor-zhou.com/" />
+  <link rel="canonical" href="https://www.viktor-zhou.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.viktor-zhou.com/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://www.viktor-zhou.com/index_zh.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.viktor-zhou.com/" />
   <link rel="shortcut icon" href="./homepage_imgs/d.zhou.ico" type="image/x-icon" />
   <title>Dongliang's Homepage</title>
   <link rel="stylesheet" href="./assets/css/homepage.css" />
 
   <script async src="./homepage_files/analytics.js"></script>
-  <script src="./assets/js/homepage.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "UA-159825357-1");
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159825357-1"></script>
+  <script defer src="./assets/js/homepage.js"></script>
 </head>
 
 <body>
@@ -36,7 +59,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="header-photo">
-        <img src="./homepage_imgs/me.jpeg" id="me" alt="Portrait of Dongliang Zhou" />
+        <img src="./homepage_imgs/me.jpeg" id="me" alt="Portrait of Dongliang Zhou" width="758" height="868"
+          fetchpriority="high" />
       </div>
       <div class="header-bio" id="bio">
         <h1>
@@ -55,17 +79,17 @@
         </div>
 
         <div class="external">
-          <a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank"
+          <a class="icon-link" href="https://scholar.google.com/citations?user=7di2778AAAAJ" target="_blank" rel="noopener noreferrer"
             aria-label="Google Scholar">
             <img src="./homepage_assets/icons8-google-scholar-144.png" alt="Google Scholar Profile"
               style="height: 2.65em;" />
           </a>
 
-          <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" aria-label="HF">
+          <a class="icon-link" href="https://huggingface.co/MML-Group" target="_blank" rel="noopener noreferrer" aria-label="HF">
             <img src="./homepage_assets/huggingface_logo-noborder.svg" alt="Huggingface" style="height: 2.6em;" />
           </a>
 
-          <a class="icon-link" href="https://github.com/MML-Group" target="_blank" aria-label="GitHub">
+          <a class="icon-link" href="https://github.com/MML-Group" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <img src="./homepage_assets/github.icon.svg" alt="GitHub" style="height: 2.6em;" />
           </a>
 
@@ -93,19 +117,21 @@
 
     <section class="container section" aria-labelledby="publications-heading">
       <h2 id="publications-heading">Selected Publications</h2>
-      <div id="publications-list"></div>
+      <div id="publications-list" aria-live="polite">
+        <p class="publication-status">Loading publications…</p>
+      </div>
     </section>
 
     <section class="container section" aria-labelledby="services-heading">
       <h2 id="services-heading">Professional Services</h2>
 
-      <h4>Editorial Roles</h4>
+      <h3>Editorial Roles</h3>
       <ul>
         <li>Associate Editor, Applied Intelligence (JCR Q2)</li>
         <li>Editorial Board Member, Applied Soft Computing (JCR Q1)</li>
       </ul>
 
-      <h4>Conference/Journal Reviewer</h4>
+      <h3>Conference/Journal Reviewer</h3>
       <ul>
         <li>CVPR, ACM MM, IJCAI, etc.</li>
         <li>IJCV, IEEE TIP, TCYB, TNNLS, TMM, TCSVT, TII, TASE, TIM, etc.</li>
