@@ -10,8 +10,14 @@
 
   <url>
     <loc>https://www.viktor-zhou.com/index_zh.html</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktor-zhou.com/admissions_zh.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
