@@ -1,54 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
-  <title>404 Not Found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-    }
-    .container {
-      max-width: 768px;
-      margin: 80px auto;
-      border-radius: 10px;
-      background-color: #fff;
-      padding: 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      color: #0953d4;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: #0050e7;
-      font-size: 16px;
-      border: 1px solid #0050e7;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    a:hover {
-      background-color: #0050e7;
-      color: #fff;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="shortcut icon" href="/homepage_imgs/d.zhou.ico" type="image/x-icon" />
+  <title>页面未找到 — Page Not Found</title>
+  <link rel="stylesheet" href="/assets/css/homepage.css?v=20260804-2" />
 </head>
-<body>
-  <div class="container">
-    <h1>404</h1>
-    <p>Oops! The page you are looking for does not exist.</p>
-    <a href="/">Return to Home</a>
-  </div>
+
+<body class="error-page">
+  <nav class="top-nav" aria-label="网站导航">
+    <div class="top-nav-inner">
+      <div class="top-nav-brand">
+        <span class="brand-text">周栋梁 <span style="color: var(--muted-text);">|</span> Dongliang Zhou</span>
+      </div>
+      <div class="top-nav-links">
+        <a href="/index_zh.html">中文主页</a>
+        <a href="/">English</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="error-main">
+    <section class="container error-card" aria-labelledby="error-heading">
+      <p class="error-code" aria-hidden="true">404</p>
+      <h1 id="error-heading">页面未找到</h1>
+      <p class="error-lead">您访问的页面可能已被移动、重命名或不存在。</p>
+      <p class="error-en" lang="en">The page you are looking for may have been moved, renamed, or does not exist.</p>
+      <div class="error-actions">
+        <a class="admissions-button" href="/index_zh.html">返回中文主页</a>
+        <a class="error-secondary-link" href="/">Go to English Homepage</a>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
