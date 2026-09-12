@@ -457,6 +457,82 @@
       text-align: left;
     }
 
+    .students-section {
+      padding: 28px 30px 30px;
+    }
+
+    .students-heading-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .students-heading-row h2 {
+      margin-bottom: 0;
+    }
+
+    .students-eyebrow,
+    html[lang^="zh"] .students-eyebrow {
+      margin: 0 0 5px 14px;
+      color: var(--accent-color);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-align: left;
+    }
+
+    .students-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .student-card {
+      position: relative;
+      min-height: 136px;
+      padding: 19px 20px;
+      border: 1px solid rgba(191, 219, 254, 0.9);
+      border-radius: 16px;
+      background: linear-gradient(145deg, #ffffff, #f7f8ff);
+    }
+
+    .student-card h3 {
+      margin: 0 0 9px;
+      padding-right: 74px;
+      color: var(--primary-color);
+      font-size: 20px;
+    }
+
+    .student-card p,
+    html[lang^="zh"] .student-card p {
+      margin: 0 0 3px;
+      color: var(--muted-text);
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .student-card .student-school {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .student-role {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: #4338ca;
+      background: #eef2ff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
     .back-home {
       text-align: center;
       margin: 10px 0 0;
@@ -765,5 +841,17 @@
       .admissions-number,
       html[lang^="zh"] .admissions-number {
         font-size: 24px;
+      }
+
+      .students-section {
+        padding: 22px 16px 20px;
+      }
+
+      .students-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .student-card {
+        min-height: 0;
       }
     }
